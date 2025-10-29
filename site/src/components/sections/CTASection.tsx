@@ -15,7 +15,7 @@ export default function CTASection() {
             <p className="mt-2 text-sm text-muted-foreground">Llámanos o envíanos el formulario y te respondemos rápido.</p>
           </div>
           <div className="mt-4 md:mt-0 flex gap-3">
-            <Button asChild size="lg" className="flex-1"><a href="tel:722109111">Llamar ahora</a></Button>
+            <Button asChild size="lg" className="flex-1"><a href="tel:684200659">Llamar ahora</a></Button>
             <Button variant="outline" size="lg" className="flex-1" onClick={() => setOpen(true)}>Solicitar presupuesto <Mail size={16} /></Button>
           </div>
         </div>

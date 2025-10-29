@@ -94,7 +94,7 @@ export default async function AirportPage({ params }: PageProps) {
     provider: {
       "@type": "LocalBusiness",
       name: "LogroVTC",
-      telephone: "+34722109111",
+      telephone: "+34684200659",
       url: `https://logrovtc.com/mail/aeropuertos/${airport.slug}`,
       areaServed: ["La Rioja", "España"],
     },
@@ -174,7 +174,7 @@ export default async function AirportPage({ params }: PageProps) {
 
       <Reveal><ServicesNav /></Reveal>
       <Reveal><Reviews context="airport" slug={airport.slug} /></Reveal>
-      <Reveal><Gallery count={8} /></Reveal>
+      <Reveal><Gallery count={4} /></Reveal>
 
       <Reveal>
         <AirportFaqs slug={airport.slug} />
@@ -193,8 +193,7 @@ function getAirportFaqs() {
     { q: "¿Cuánto equipaje puedo llevar?", a: "Nuestros vehículos admiten equipaje estándar por pasajero. Indícanos bultos especiales para asignar vehículo adecuado." },
     { q: "¿Aceptáis pago con tarjeta?", a: "Sí, aceptamos tarjetas y ofrecemos factura para empresas." },
     { q: "¿Qué pasa si mi vuelo se retrasa?", a: "Ajustamos la recogida al nuevo horario y mantenemos el contacto en todo momento." },
-    { q: "¿Podéis llevar sillas infantiles?", a: "Sí, bajo petición previa y sujeto a disponibilidad, sin coste adicional." },
-    { q: "¿Hacéis esperas o paradas?", a: "Podemos incluir una parada breve o un tiempo de espera; se cotiza según el caso." },
+    { q: "¿Podéis llevar sillas infantiles?", a: "Sí, bajo solicitud, sujeto a disponibilidad y sin coste adicional." },
     { q: "¿Dais precio cerrado?", a: "Sí, ofrecemos precio cerrado según origen/destino y condiciones del servicio." },
   ];
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 type GalleryProps = { count?: number };
 
-export default function Gallery({ count = 8 }: GalleryProps) {
+export default function Gallery({ count = 4 }: GalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [images, setImages] = useState<string[]>([]);
 

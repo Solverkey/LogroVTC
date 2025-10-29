@@ -87,7 +87,7 @@ export default async function ServicePage({ params }: PageProps) {
     provider: {
       "@type": "LocalBusiness",
       name: "LogroVTC",
-      telephone: "+34722109111",
+      telephone: "+34684200659",
       areaServed: ["La Rioja", "España"],
       url: "https://logrovtc.com/mail"
     },
@@ -172,7 +172,7 @@ export default async function ServicePage({ params }: PageProps) {
 
       <Reveal><ServicesNav /></Reveal>
       <Reveal><Reviews context="service" slug={service.slug} /></Reveal>
-      <Reveal><Gallery count={8} /></Reveal>
+      <Reveal><Gallery count={4} /></Reveal>
 
       <Reveal>
         <ServiceFaqs slug={service.slug} />
@@ -194,7 +194,7 @@ function getServiceFaqs(slug: string) {
       { q: "¿Puedo solicitar un traslado al aeropuerto a cualquier hora?", a: "Sí, operamos 24/7 con reserva previa. Recomendamos solicitar con antelación para garantizar disponibilidad, especialmente en madrugadas y fines de semana." },
       { q: "¿Me recoge el conductor en la terminal?", a: "Sí, hacemos seguimiento del vuelo y te esperamos en llegadas con cartela si lo necesitas. Incluimos un tiempo de cortesía para la recogida." },
       { q: "¿Aceptáis pago con tarjeta?", a: "Sí, todos nuestros vehículos aceptan pago con tarjeta y ofrecemos factura para empresas." },
-      { q: "¿Incluye silla infantil?", a: "Podemos llevar sistemas de retención infantil bajo petición previa y sin coste adicional, sujeto a disponibilidad." },
+      { q: "¿Incluye silla infantil?", a: "Podemos llevar sistemas de retención infantil bajo solicitud, sujeto a disponibilidad y sin coste adicional." },
       { q: "¿Qué ocurre si mi vuelo se retrasa?", a: "Ajustamos la recogida según el nuevo horario y te mantenemos informado sin coste de espera razonable." },
       { q: "¿Cuánto equipaje puedo llevar?", a: "Vehículos con amplio maletero; avísanos de equipaje extra o voluminoso para asignar la flota adecuada." },
       { q: "¿Realizáis traslados interprovinciales?", a: "Sí, realizamos servicios a cualquier aeropuerto y ciudad, nacionales e internacionales." },

@@ -56,8 +56,7 @@ export default function HomePage() {
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="font-[var(--font-display)] text-6xl md:text-7xl font-extrabold leading-[0.95]">
-                VTC en Logroño y La Rioja
-                <br /> Traslados, Aeropuerto y Mensajería
+                VTC en Logroño y La Rioja - Traslados, Aeropuerto y Mensajería
               </h1>
               <p className="mt-5 text-muted-foreground text-lg max-w-prose">
                 LogroVTC es tu <strong>VTC en Logroño y La Rioja</strong>. Realizamos <strong>traslado aeropuerto Logroño</strong> (Bilbao, Pamplona, Madrid, Zaragoza),
@@ -65,7 +64,7 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg">
-                  <a href="tel:722109111">
+                  <a href="tel:684200659">
                     Llamar ahora <ArrowRight size={16} />
                   </a>
                 </Button>
@@ -261,7 +260,7 @@ export default function HomePage() {
                 {/* Botones estandarizados */}
                 <div className="flex gap-3">
                   <Button asChild className="flex-1">
-                    <a href="tel:722109111">Llamar ahora</a>
+                    <a href="tel:684200659">Llamar ahora</a>
                   </Button>
                   <Button variant="outline" className="flex-1" onClick={() => openModal("aeropuerto")}>
                     Pedir presupuesto
@@ -387,7 +386,7 @@ export default function HomePage() {
 
       {/* GALERÍA */}
       <Reveal>
-        <Gallery count={8} />
+        <Gallery count={4} />
       </Reveal>
 
       {/* CONTACTO IN-PAGE */}
@@ -401,7 +400,7 @@ export default function HomePage() {
               </div>
               <div className="mt-4 md:mt-0 flex gap-3">
                 <Button asChild size="lg" className="flex-1">
-                  <a href="tel:722109111">Llamar ahora</a>
+                  <a href="tel:684200659">Llamar ahora</a>
                 </Button>
                 <Button variant="outline" size="lg" className="flex-1" onClick={openGenericModal}>
                   Solicitar presupuesto <Mail size={16} />

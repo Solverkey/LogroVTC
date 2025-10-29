@@ -71,7 +71,7 @@ export default function RootLayout({
               '@type': 'LocalBusiness',
               name: 'LogroVTC',
               url: 'https://logrovtc.com/mail',
-              telephone: '+34722109111',
+              telephone: '+34684200659',
               areaServed: ['La Rioja', 'Rioja Alavesa', 'España'],
               image: 'https://logrovtc.com/mail/vehicles/vehicle-1.jpg',
               sameAs: [],
@@ -96,11 +96,11 @@ export default function RootLayout({
               <Link href="/localidades" className="hover:underline">Localidades</Link>
             </nav>
             <a
-              href="tel:722109111"
+              href="tel:684200659"
               className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm hover:opacity-90"
               aria-label="Llamar por teléfono"
             >
-              <Phone size={18} /> 722 10 91 11
+              <Phone size={18} /> 684 20 06 59
             </a>
           </div>
         </header>
@@ -128,8 +128,8 @@ export default function RootLayout({
                 <h3 className="font-semibold">Contacto</h3>
                 <ul className="text-sm text-muted-foreground space-y-2">
                   <li>
-                  <a href="tel:722109111" className="inline-flex items-center gap-2 hover:text-foreground">
-                      <Phone size={14} /> 722 10 91 11
+                  <a href="tel:684200659" className="inline-flex items-center gap-2 hover:text-foreground">
+                      <Phone size={14} /> 684 20 06 59
                     </a>
                   </li>
                   <li>info@logrovtc.com</li>
@@ -156,7 +156,7 @@ export default function RootLayout({
           </div>
         </footer>
         <a
-          href="tel:722109111"
+          href="tel:684200659"
           className="fixed md:hidden bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-3 shadow-lg"
           aria-label="Llamar ahora"
         >

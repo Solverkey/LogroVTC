@@ -11,7 +11,7 @@ export default function ContactoPage() {
     <main className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">Contacto</h1>
       <p className="mt-3 text-black/70">
-        Llámanos al <a href="tel:722109111" className="font-medium underline">722 10 91 11</a> o envíanos el siguiente formulario.
+        Llámanos al <a href="tel:684200659" className="font-medium underline">684 20 06 59</a> o envíanos el siguiente formulario.
       </p>
 
       <form action="https://formsubmit.co/larioja@logrotaxi.com" method="POST" className="mt-8 grid gap-4">

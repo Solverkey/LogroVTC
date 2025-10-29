@@ -94,7 +94,7 @@ export default async function StationPage({ params }: PageProps) {
     provider: {
       "@type": "LocalBusiness",
       name: "LogroVTC",
-      telephone: "+34722109111",
+      telephone: "+34684200659",
       url: `https://logrovtc.com/mail/estaciones/${station.slug}`,
       areaServed: ["La Rioja", "España"],
     },
@@ -164,7 +164,7 @@ export default async function StationPage({ params }: PageProps) {
 
       <Reveal><ServicesNav /></Reveal>
       <Reveal><Reviews context="station" slug={station.slug} /></Reveal>
-      <Reveal><Gallery count={8} /></Reveal>
+      <Reveal><Gallery count={4} /></Reveal>
 
       <Reveal>
         <StationFaqs slug={station.slug} />

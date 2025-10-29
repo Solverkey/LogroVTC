@@ -97,6 +97,24 @@ export const airports: Airport[] = [
     keywords: ["aeropuerto logroño", "traslado RJL", "vtc aeropuerto logrono"],
   },
   {
+    slug: "laguardia",
+    name: "Laguardia",
+    city: "Laguardia",
+    intro: "Traslados a Laguardia desde cualquier punto de La Rioja y Rioja Alavesa.",
+    description:
+      "Servicio de traslado a Laguardia con recogida y entrega puerta a puerta. Conexiones con bodegas, hoteles y puntos turísticos.",
+    keywords: ["traslado laguardia", "vtc laguardia", "transporte laguardia"],
+  },
+  {
+    slug: "elciego",
+    name: "Elciego",
+    city: "Elciego",
+    intro: "Traslados a Elciego desde cualquier punto de La Rioja y Rioja Alavesa.",
+    description:
+      "Servicio de traslado a Elciego con recogida y entrega puerta a puerta. Ideal para visitas a bodegas y turismo enológico.",
+    keywords: ["traslado elciego", "vtc elciego", "transporte elciego"],
+  },
+  {
     slug: "bilbao",
     name: "Aeropuerto de Bilbao",
     city: "Bilbao",
