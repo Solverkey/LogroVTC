@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import CookieBanner from "@/components/ui/cookie-banner";
 import CookieWidget from "@/components/ui/cookie-widget";
@@ -148,10 +149,29 @@ export default function RootLayout({
               </div>
             </div>
             
-            <div className="mt-8 pt-6 border-t border-border text-center">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} LogroVTC. Todos los derechos reservados.
-              </p>
+            <div className="mt-8 pt-6 border-t border-border">
+              {/* Logos de financiación UE */}
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/logos/ue-financiado.webp" 
+                  alt="Financiado por la Unión Europea - NextGenerationEU" 
+                  className="w-full md:w-auto max-w-[400px] h-auto object-contain"
+                  loading="eager"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/logos/plan-recuperacion.webp" 
+                  alt="Plan de Recuperación, Transformación y Resiliencia" 
+                  className="w-full md:w-auto max-w-[400px] h-auto object-contain"
+                  loading="eager"
+                />
+              </div>
+              <div className="text-center mt-6">
+                <p className="text-sm text-muted-foreground">
+                  © {new Date().getFullYear()} LogroVTC. Todos los derechos reservados.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
