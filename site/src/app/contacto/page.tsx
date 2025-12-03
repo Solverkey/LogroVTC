@@ -1,9 +1,26 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Contacto | LogroTaxi",
+export const metadata: Metadata = {
+  title: "Contacto | LogroVTC - Reserva tu traslado en La Rioja",
   description:
-    "Contacto para traslados a aeropuertos, Camino de Santiago y mensajería urgente.",
+    "Contacta con LogroVTC para traslados a aeropuertos, Camino de Santiago y mensajería urgente en La Rioja. Tel. 684 20 06 59 o rellena nuestro formulario.",
+  keywords: [
+    "contacto LogroVTC",
+    "reservar VTC Logroño",
+    "solicitar presupuesto VTC",
+    "teléfono VTC La Rioja",
+  ],
+  openGraph: {
+    title: "Contacto | LogroVTC",
+    description: "Contacta con nosotros para reservar tu traslado VTC en La Rioja",
+    url: "https://logrovtc.com/mail/contacto",
+    type: "website",
+    locale: "es_ES",
+  },
+  alternates: {
+    canonical: "https://logrovtc.com/mail/contacto",
+  },
 };
 
 export default function ContactoPage() {

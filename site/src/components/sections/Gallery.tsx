@@ -150,7 +150,7 @@ export default function Gallery({ count = 4 }: GalleryProps) {
       <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
         {images.map((src, i) => (
           <button key={i} onClick={() => setLightboxIndex(i)} className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border" aria-label={`Ampliar vehículo ${i + 1}`}>
-            <Image src={src} alt={`Vehículo ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+            <Image src={src} alt={`Vehículo ${i + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover hover:scale-105 transition-transform duration-500" />
           </button>
         ))}
       </div>

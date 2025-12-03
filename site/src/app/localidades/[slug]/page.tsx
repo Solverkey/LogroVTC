@@ -26,6 +26,36 @@ const LOCALITIES = {
     description: "Traslados en Elciego con visitas a bodegas y transfer a aeropuertos. Rutas personalizadas por Rioja Alavesa.",
     keywords: ["vtc Elciego", "taxi Elciego", "Marqués de Riscal traslado"],
   },
+  haro: {
+    name: "Haro",
+    intro: "VTC en Haro: capital del vino de Rioja, bodegas y traslados.",
+    description: "Servicio VTC en Haro con traslados a bodegas, aeropuertos y estaciones. Ruta del vino, visitas enoturísticas y conexiones nacionales.",
+    keywords: ["vtc Haro", "taxi Haro", "bodegas Haro", "enoturismo Haro"],
+  },
+  calahorra: {
+    name: "Calahorra",
+    intro: "VTC en Calahorra: traslados a aeropuertos y servicios locales.",
+    description: "Traslados VTC desde Calahorra a aeropuertos de Zaragoza, Bilbao, Pamplona y Madrid. Servicio profesional 24/7 con precio cerrado.",
+    keywords: ["vtc Calahorra", "taxi Calahorra", "traslado aeropuerto Calahorra"],
+  },
+  arnedo: {
+    name: "Arnedo",
+    intro: "VTC en Arnedo: traslados cómodos y seguros.",
+    description: "Servicio VTC en Arnedo con conexiones a aeropuertos, estaciones y ciudades cercanas. Flota moderna y conductores experimentados.",
+    keywords: ["vtc Arnedo", "taxi Arnedo", "traslado Arnedo"],
+  },
+  "santo-domingo": {
+    name: "Santo Domingo de la Calzada",
+    intro: "VTC en Santo Domingo de la Calzada: Camino de Santiago y traslados.",
+    description: "Traslados VTC en Santo Domingo de la Calzada, especialistas en Camino de Santiago. Transfer de mochilas, recogidas y aeropuertos.",
+    keywords: ["vtc Santo Domingo", "Camino Santiago Santo Domingo", "taxi Santo Domingo"],
+  },
+  najera: {
+    name: "Nájera",
+    intro: "VTC en Nájera: Camino de Santiago y servicios de transporte.",
+    description: "Servicio VTC en Nájera con apoyo al Camino de Santiago y traslados a aeropuertos. Asistencia a peregrinos y transporte local.",
+    keywords: ["vtc Nájera", "taxi Nájera", "Camino Santiago Nájera"],
+  },
 } as const;
 
 type Slug = keyof typeof LOCALITIES;
@@ -42,7 +72,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!l) return {};
   const title = `${l.name} | VTC y traslados | LogroVTC`;
   const description = l.intro;
-  const url = `https://logro-vtc.vercel.app/localidades/${slug}`;
+  const url = `https://logrovtc.com/mail/localidades/${slug}`;
   return {
     title,
     description,

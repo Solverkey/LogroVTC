@@ -1051,7 +1051,7 @@ function GalleryAdmin({ headers }: { headers: Record<string, string> }) {
               <div className="flex items-center gap-3">
                 <div className="relative w-24 h-16 shrink-0 border rounded overflow-hidden bg-muted">
                   {it.url ? (
-                    <Image src={it.url} alt={it.alt || ""} fill className="object-cover" />
+                    <Image src={it.url} alt={it.alt || ""} fill sizes="96px" className="object-cover" />
                   ) : null}
                 </div>
                 <div className="flex items-center gap-2">

@@ -28,12 +28,39 @@ export const metadata: Metadata = {
   description:
     "VTC en Logroño y La Rioja. Traslados a aeropuertos (Bilbao, Pamplona, Madrid, Zaragoza), apoyo al Camino de Santiago y mensajería urgente con precio cerrado. Tel. 722 10 91 11.",
   metadataBase: new URL("https://logrovtc.com/mail"),
+  keywords: [
+    "VTC Logroño",
+    "VTC La Rioja",
+    "traslado aeropuerto Logroño",
+    "taxi aeropuerto Bilbao",
+    "traslado aeropuerto Pamplona",
+    "Camino de Santiago La Rioja",
+    "mensajería urgente La Rioja",
+    "transporte VTC",
+    "taxi Logroño",
+    "traslado Madrid Logroño",
+    "servicio VTC profesional",
+  ],
+  authors: [{ name: "LogroVTC" }],
+  creator: "LogroVTC",
+  publisher: "LogroVTC",
   alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "VTC en Logroño y La Rioja | LogroVTC",
     description:
       "Traslados VTC en La Rioja: aeropuertos, Camino de Santiago y mensajería urgente con precio cerrado.",
-      url: "https://logrovtc.com/mail/",
+    url: "https://logrovtc.com/mail/",
     siteName: "LogroVTC",
     type: "website",
     locale: "es_ES",
@@ -53,6 +80,9 @@ export const metadata: Metadata = {
       "Traslados a aeropuertos, Camino de Santiago y mensajería urgente.",
     images: ["/vehicles/vehicle-1.jpg"],
   },
+  verification: {
+    google: "google-site-verification-code", // Reemplaza con tu código de verificación de Google Search Console
+  },
 };
 
 export default function RootLayout({
@@ -62,6 +92,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y47PQ86BH"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5Y47PQ86BH');
+            `,
+          }}
+        />
+        {/* Manifest y otros metadatos */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="canonical" href="https://logrovtc.com/mail/" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="LogroVTC" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${display.variable} antialiased`}>
         {/* JSON-LD Organization */}
         <script

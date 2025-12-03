@@ -190,6 +190,7 @@ export default function HomePage() {
                   src={airportImg}
                   alt="Traslado al aeropuerto (recogida en llegadas)"
                   fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
                   onError={() => setAirportImg("/vehicles/vehicle-2.jpg")}
                 />
@@ -303,6 +304,7 @@ export default function HomePage() {
                   src={caminoImg}
                   alt="Peregrinos en el Camino de Santiago"
                   fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
                   onError={() => setCaminoImg("/vehicles/vehicle-3.jpg")}
                 />
@@ -326,6 +328,7 @@ export default function HomePage() {
                   src={mensajeriaImg}
                   alt="Mensajería urgente"
                   fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
                   onError={() => setMensajeriaImg("/vehicles/vehicle-4.jpg")}
                 />
