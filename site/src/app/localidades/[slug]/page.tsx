@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/visual/Reveal";
 import HeroWithForm from "@/components/sections/HeroWithForm";
+import Reviews from "@/components/sections/Reviews";
+import Gallery from "@/components/sections/Gallery";
+import CTASection from "@/components/sections/CTASection";
+import ServicesNav from "@/components/sections/ServicesNav";
 
 const LOCALITIES = {
   logrono: {
@@ -81,6 +85,11 @@ export default async function LocalityPage({ params }: PageProps) {
           </div>
         </Reveal>
       </section>
+
+      <Reveal><ServicesNav /></Reveal>
+      <Reveal><Reviews context="home" slug={slug} /></Reveal>
+      <Reveal><Gallery count={4} /></Reveal>
+      <Reveal><CTASection /></Reveal>
     </main>
   );
 }

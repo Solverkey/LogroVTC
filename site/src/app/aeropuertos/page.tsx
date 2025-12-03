@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { airports } from "@/lib/site-data";
 import { listAirports } from "@/lib/cms";
 import Reveal from "@/components/visual/Reveal";
+import Reviews from "@/components/sections/Reviews";
 
 export const metadata: Metadata = {
   title: "Aeropuertos | LogroVTC",
@@ -57,6 +58,10 @@ export default async function AeropuertosIndexPage() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal>
+        <Reviews context="service" slug="aeropuerto" />
+      </Reveal>
     </main>
   );
 }

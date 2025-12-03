@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { stations } from "@/lib/site-data";
 import { listStations } from "@/lib/cms";
 import Reveal from "@/components/visual/Reveal";
+import Reviews from "@/components/sections/Reviews";
 
 export const metadata: Metadata = {
   title: "Estaciones | LogroVTC",
@@ -57,6 +58,10 @@ export default async function EstacionesIndexPage() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal>
+        <Reviews context="station" />
+      </Reveal>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import Reveal from "@/components/visual/Reveal";
+import Reviews from "@/components/sections/Reviews";
 
 const LOCALITIES = [
   { slug: "logrono", name: "Logroño", intro: "VTC en Logroño y alrededores: aeropuertos y rutas locales." },
@@ -42,6 +43,10 @@ export default function LocalidadesIndexPage() {
           </Reveal>
         ))}
       </section>
+
+      <Reveal>
+        <Reviews context="home" />
+      </Reveal>
     </main>
   );
 }
