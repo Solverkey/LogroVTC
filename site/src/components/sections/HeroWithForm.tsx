@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import InteractiveBackground from "@/components/visual/InteractiveBackground";
 import ServiceModal from "@/components/ui/modal";
@@ -70,6 +71,18 @@ export default function HeroWithForm({ title, subtitle, serviceType = "aeropuert
               <input type="time" name="hora" className="h-11 rounded-md border border-input px-3 outline-none focus:ring-2 focus:ring-ring/50" />
             </div>
             <textarea name="detalles" rows={6} placeholder="Detalles del servicio (pasajeros, equipaje, paradas, instrucciones, etc.)" className="mt-3 w-full rounded-md border border-input px-3 py-2 outline-none focus:ring-2 focus:ring-ring/50" />
+            <div className="mt-4 flex items-start gap-2">
+              <input 
+                type="checkbox" 
+                id="privacy-accept-hero" 
+                name="privacy-accept" 
+                required 
+                className="mt-1 h-4 w-4 rounded border-input"
+              />
+              <label htmlFor="privacy-accept-hero" className="text-xs text-muted-foreground">
+                He leído y acepto la <Link href="/politica-privacidad" className="underline hover:text-foreground" target="_blank">Política de Privacidad</Link> y el <Link href="/aviso-legal" className="underline hover:text-foreground" target="_blank">Aviso Legal</Link>.
+              </label>
+            </div>
             <Button type="submit" className="w-full mt-4">Solicitar servicio</Button>
           </form>
         </div>

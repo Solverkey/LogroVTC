@@ -75,6 +75,18 @@ export default function ContactoPage() {
             className="rounded-lg border border-black/10 px-3 py-2 outline-none focus:ring-2 focus:ring-black/20"
           />
         </div>
+        <div className="flex items-start gap-2">
+          <input 
+            type="checkbox" 
+            id="privacy-accept-contact" 
+            name="privacy-accept" 
+            required 
+            className="mt-1 h-4 w-4 rounded border-input"
+          />
+          <label htmlFor="privacy-accept-contact" className="text-xs text-black/70">
+            He leído y acepto la <Link href="/politica-privacidad" className="underline hover:text-black" target="_blank">Política de Privacidad</Link> y el <Link href="/aviso-legal" className="underline hover:text-black" target="_blank">Aviso Legal</Link>.
+          </label>
+        </div>
         <button type="submit" className="inline-flex items-center justify-center rounded-full bg-black text-white px-6 h-11 text-sm font-medium hover:bg-black/90">
           Enviar
         </button>

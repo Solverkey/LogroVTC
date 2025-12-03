@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import Link from "next/link";
 import { Button } from "./button";
 import { X } from "lucide-react";
 
@@ -19,6 +20,7 @@ export default function GenericModal({ isOpen, onClose }: GenericModalProps) {
     hora: "",
     detalles: "",
   });
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -136,9 +138,23 @@ export default function GenericModal({ isOpen, onClose }: GenericModalProps) {
             value={formData.detalles}
             onChange={(e) => setFormData({ ...formData, detalles: e.target.value })}
           />
+
+          <div className="mt-4 flex items-start gap-2">
+            <input 
+              type="checkbox" 
+              id="privacy-accept-generic" 
+              checked={privacyAccepted}
+              onChange={(e) => setPrivacyAccepted(e.target.checked)}
+              required 
+              className="mt-1 h-4 w-4 rounded border-input"
+            />
+            <label htmlFor="privacy-accept-generic" className="text-xs text-muted-foreground">
+              He leído y acepto la <Link href="/politica-privacidad" className="underline hover:text-foreground" target="_blank">Política de Privacidad</Link> y el <Link href="/aviso-legal" className="underline hover:text-foreground" target="_blank">Aviso Legal</Link>.
+            </label>
+          </div>
           
           <div className="flex gap-3 pt-6">
-            <Button type="submit" className="flex-1">
+            <Button type="submit" className="flex-1" disabled={!privacyAccepted}>
               Solicitar servicio
             </Button>
             <Button type="button" variant="outline" onClick={onClose} className="flex-1">
