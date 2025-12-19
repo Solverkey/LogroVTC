@@ -72,7 +72,8 @@ export async function POST(req: Request) {
     const port = Number(process.env.SMTP_PORT || 587);
     const user = process.env.SMTP_USER;
     const pass = process.env.SMTP_PASS;
-    const from = process.env.SMTP_FROM || `LogroVTC <info@logrovtc.com>`;
+    // El from DEBE ser el mismo email que el usuario autenticado
+    const from = user || "info@logrovtc.com";
 
     if (!host || !user || !pass) {
       console.error("[Contact API] SMTP no configurado:", { host: !!host, user: !!user, pass: !!pass });
@@ -82,11 +83,16 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       host,
       port,
-      secure: port === 465,
-      auth: { user, pass },
-      tls: {
-        rejectUnauthorized: false, // Permitir certificados autofirmados
+      secure: port === 465, // true para 465, false para otros puertos
+      auth: { 
+        user, 
+        pass,
       },
+      tls: {
+        ciphers: "SSLv3",
+        rejectUnauthorized: false,
+      },
+      requireTLS: port === 587, // Forzar STARTTLS en puerto 587
     });
 
     const subject = `Nueva solicitud de contacto - ${data.nombre || "Sin nombre"}`;
