@@ -37,6 +37,7 @@ export default function HomePage() {
   const [airportImg, setAirportImg] = useState("/vehicles/airport.jpg");
   const [caminoImg, setCaminoImg] = useState("/vehicles/camino.jpg");
   const [mensajeriaImg, setMensajeriaImg] = useState("/vehicles/mensajeria.jpg");
+  const [formLoading, setFormLoading] = useState(false);
 
   const openModal = (serviceType: "aeropuerto" | "camino" | "mensajeria") => {
     setModalServiceType(serviceType);
@@ -45,6 +46,28 @@ export default function HomePage() {
 
   const openGenericModal = () => {
     setGenericModalOpen(true);
+  };
+
+  const handleHomeFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormLoading(true);
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const resp = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, source: "home" }),
+      });
+      const result = await resp.json();
+      if (!resp.ok || !result.ok) throw new Error(result.error || "send_error");
+      window.location.href = "/gracias";
+    } catch {
+      alert("No se pudo enviar el formulario. Prueba de nuevo más tarde.");
+    } finally {
+      setFormLoading(false);
+    }
   };
 
   return (
@@ -75,11 +98,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               {/* Formulario de solicitud rápido ocupando la columna */}
-              <form action="https://formsubmit.co/larioja@logrotaxi.com" method="POST" className="relative rounded-2xl border border-border bg-white/80 backdrop-blur p-6">
-                <input type="hidden" name="_subject" value="Nueva solicitud LogroVTC" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://logrovtc.com/mail/gracias" />
-                <input type="text" name="_honey" className="hidden" aria-hidden="true" tabIndex={-1} />
+              <form onSubmit={handleHomeFormSubmit} className="relative rounded-2xl border border-border bg-white/80 backdrop-blur p-6">
                 <h3 className="text-xl font-semibold mb-1">Solicita tu servicio</h3>
                 <p className="text-sm text-muted-foreground mb-3">Este formulario se enviará al equipo de LogroVTC. Nos pondremos en contacto contigo lo antes posible para confirmar los detalles de tu traslado.</p>
                 <div className="grid md:grid-cols-2 gap-3">
@@ -107,7 +126,9 @@ export default function HomePage() {
                     He leído y acepto la <Link href="/politica-privacidad" className="underline hover:text-foreground" target="_blank">Política de Privacidad</Link> y el <Link href="/aviso-legal" className="underline hover:text-foreground" target="_blank">Aviso Legal</Link>.
                   </label>
                 </div>
-                <Button type="submit" className="w-full mt-4">Solicitar servicio</Button>
+                <Button type="submit" className="w-full mt-4" disabled={formLoading}>
+                  {formLoading ? "Enviando..." : "Solicitar servicio"}
+                </Button>
               </form>
             </div>
           </div>

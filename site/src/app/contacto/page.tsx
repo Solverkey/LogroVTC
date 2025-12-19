@@ -1,29 +1,32 @@
+"use client";
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contacto | LogroVTC - Reserva tu traslado en La Rioja",
-  description:
-    "Contacta con LogroVTC para traslados a aeropuertos, Camino de Santiago y mensajería urgente en La Rioja. Tel. 684 20 06 59 o rellena nuestro formulario.",
-  keywords: [
-    "contacto LogroVTC",
-    "reservar VTC Logroño",
-    "solicitar presupuesto VTC",
-    "teléfono VTC La Rioja",
-  ],
-  openGraph: {
-    title: "Contacto | LogroVTC",
-    description: "Contacta con nosotros para reservar tu traslado VTC en La Rioja",
-    url: "https://logrovtc.com/mail/contacto",
-    type: "website",
-    locale: "es_ES",
-  },
-  alternates: {
-    canonical: "https://logrovtc.com/mail/contacto",
-  },
-};
+import { useState } from "react";
 
 export default function ContactoPage() {
+  const [formLoading, setFormLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormLoading(true);
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const resp = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, detalles: data.mensaje, source: "contacto" }),
+      });
+      const result = await resp.json();
+      if (!resp.ok || !result.ok) throw new Error(result.error || "send_error");
+      window.location.href = "/gracias";
+    } catch {
+      alert("No se pudo enviar el formulario. Prueba de nuevo más tarde.");
+    } finally {
+      setFormLoading(false);
+    }
+  };
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">Contacto</h1>
@@ -31,11 +34,7 @@ export default function ContactoPage() {
         Llámanos al <a href="tel:684200659" className="font-medium underline">684 20 06 59</a> o envíanos el siguiente formulario.
       </p>
 
-      <form action="https://formsubmit.co/larioja@logrotaxi.com" method="POST" className="mt-8 grid gap-4">
-        <input type="hidden" name="_subject" value="Nueva solicitud LogroVTC" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://logrovtc.com/mail/gracias" />
-        <input type="text" name="_honey" className="hidden" aria-hidden="true" tabIndex={-1} />
+      <form onSubmit={handleSubmit} className="mt-8 grid gap-4">
         <div className="grid gap-2">
           <label htmlFor="nombre" className="text-sm font-medium">Nombre</label>
           <input
@@ -87,13 +86,17 @@ export default function ContactoPage() {
             He leído y acepto la <Link href="/politica-privacidad" className="underline hover:text-black" target="_blank">Política de Privacidad</Link> y el <Link href="/aviso-legal" className="underline hover:text-black" target="_blank">Aviso Legal</Link>.
           </label>
         </div>
-        <button type="submit" className="inline-flex items-center justify-center rounded-full bg-black text-white px-6 h-11 text-sm font-medium hover:bg-black/90">
-          Enviar
+        <button 
+          type="submit" 
+          disabled={formLoading}
+          className="inline-flex items-center justify-center rounded-full bg-black text-white px-6 h-11 text-sm font-medium hover:bg-black/90 disabled:opacity-50"
+        >
+          {formLoading ? "Enviando..." : "Enviar"}
         </button>
       </form>
 
       <p className="mt-6 text-sm text-black/60">
-        También puedes escribirnos a <a href="mailto:larioja@logrotaxi.com" className="underline">larioja@logrotaxi.com</a>.
+        También puedes escribirnos a <a href="mailto:info@logrovtc.com" className="underline">info@logrovtc.com</a>.
       </p>
       <p className="mt-2 text-sm text-black/60">
         <Link href="/" className="underline">Volver al inicio</Link>

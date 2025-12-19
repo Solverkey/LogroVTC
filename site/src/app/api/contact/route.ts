@@ -67,15 +67,16 @@ export async function POST(req: Request) {
       }
     }
 
-    const to = process.env.MAIL_TO || "larioja@logrotaxi.com";
+    const to = process.env.MAIL_TO || "info@logrovtc.com";
     const host = process.env.SMTP_HOST;
     const port = Number(process.env.SMTP_PORT || 587);
     const user = process.env.SMTP_USER;
     const pass = process.env.SMTP_PASS;
-    const from = process.env.SMTP_FROM || `LogroVTC <no-reply@${(host || "mail.local").replace(/:.*/, "")} >`;
+    const from = process.env.SMTP_FROM || `LogroVTC <info@logrovtc.com>`;
 
     if (!host || !user || !pass) {
-      return new Response(JSON.stringify({ ok: false, error: "SMTP no configurado (SMTP_HOST/SMTP_USER/SMTP_PASS)" }), { status: 500, headers: { "Content-Type": "application/json" } });
+      console.error("[Contact API] SMTP no configurado:", { host: !!host, user: !!user, pass: !!pass });
+      return new Response(JSON.stringify({ ok: false, error: "SMTP no configurado" }), { status: 500, headers: { "Content-Type": "application/json" } });
     }
 
     const transporter = nodemailer.createTransport({
@@ -83,16 +84,23 @@ export async function POST(req: Request) {
       port,
       secure: port === 465,
       auth: { user, pass },
+      tls: {
+        rejectUnauthorized: false, // Permitir certificados autofirmados
+      },
     });
 
     const subject = `Nueva solicitud de contacto - ${data.nombre || "Sin nombre"}`;
     const text = buildEmailText(data, req.headers.get("user-agent") || undefined);
 
+    console.log("[Contact API] Enviando email a:", to, "desde:", from);
     await transporter.sendMail({ from, to, subject, text });
+    console.log("[Contact API] Email enviado correctamente");
 
     return new Response(JSON.stringify({ ok: true }), { status: 200, headers: { "Content-Type": "application/json" } });
   } catch (e) {
-    return new Response(JSON.stringify({ ok: false, error: "Error enviando email" }), { status: 500, headers: { "Content-Type": "application/json" } });
+    console.error("[Contact API] Error enviando email:", e);
+    const errorMessage = e instanceof Error ? e.message : "Error desconocido";
+    return new Response(JSON.stringify({ ok: false, error: `Error enviando email: ${errorMessage}` }), { status: 500, headers: { "Content-Type": "application/json" } });
   }
 }
 

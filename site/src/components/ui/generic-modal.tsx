@@ -41,14 +41,15 @@ export default function GenericModal({ isOpen, onClose }: GenericModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const fd = new FormData();
-      Object.entries(formData).forEach(([k, v]) => fd.append(k, v));
-      fd.append("_subject", "Nueva solicitud LogroVTC");
-      fd.append("_captcha", "false");
-      fd.append("_next", "https://logrovtc.com/mail/gracias");
-      const resp = await fetch("https://formsubmit.co/larioja@logrotaxi.com", { method: "POST", body: fd });
-      if (!resp.ok) throw new Error("send_error");
+      const resp = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, source: "modal-generico" }),
+      });
+      const result = await resp.json();
+      if (!resp.ok || !result.ok) throw new Error(result.error || "send_error");
       onClose();
+      window.location.href = "/gracias";
     } catch {
       alert("No se pudo enviar el formulario. Prueba de nuevo más tarde.");
     }
