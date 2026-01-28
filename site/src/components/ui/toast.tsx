@@ -38,7 +38,7 @@ export function useToast() {
 export function ToastViewport({ toasts }: { toasts: ToastItem[] }) {
   if (!toasts || toasts.length === 0) return null;
   return (
-    <div className="fixed right-3 bottom-3 z-50 grid gap-2 w-[calc(100vw-24px)] max-w-sm">
+    <div className="fixed right-3 bottom-3 z-50 grid gap-2 max-w-sm">
       {toasts.map((t) => (
         <div
           key={t.id}
