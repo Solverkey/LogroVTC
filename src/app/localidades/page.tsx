@@ -11,8 +11,23 @@ const LOCALITIES = [
 
 export const metadata: Metadata = {
   title: "Localidades | LogroVTC",
-  description: "Servicio VTC en Logroño, Laguardia y Elciego.",
-  alternates: { canonical: "/localidades" },
+  description: "Servicio VTC en Logroño, Laguardia, Elciego y toda La Rioja. Traslados a aeropuertos y servicios locales.",
+  alternates: {
+    canonical: "https://logrovtc.com/localidades"
+  },
+  openGraph: {
+    title: "Localidades | LogroVTC",
+    description: "Servicio VTC en Logroño, Laguardia, Elciego y La Rioja.",
+    url: "https://logrovtc.com/localidades",
+    siteName: "LogroVTC",
+    type: "website",
+    locale: "es_ES",
+  },
+  twitter: {
+    card: "summary",
+    title: "Localidades | LogroVTC",
+    description: "Servicio VTC en Logroño, Laguardia, Elciego y La Rioja.",
+  },
 };
 
 export default function LocalidadesIndexPage() {

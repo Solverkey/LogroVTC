@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (s) {
       const title = `${s.name} | LogroVTC`;
       const description = s.description;
-      const url = `https://logro-vtc.vercel.app/servicios/${slug}`;
+      const url = `https://logrovtc.com/servicios/${slug}`;
       return {
         title,
         description,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service) return {};
   const title = `${service.name} | LogroVTC`;
   const description = service.description;
-  const url = `https://logro-vtc.vercel.app/servicios/${service.slug}`;
+  const url = `https://logrovtc.com/servicios/${service.slug}`;
   return {
     title,
     description,
@@ -89,7 +89,7 @@ export default async function ServicePage({ params }: PageProps) {
       name: "LogroVTC",
       telephone: "+34684200659",
       areaServed: ["La Rioja", "España"],
-      url: "https://logro-vtc.vercel.app"
+      url: "https://logrovtc.com"
     },
     serviceType: service.slug,
   });
@@ -107,9 +107,9 @@ export default async function ServicePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://logro-vtc.vercel.app/" },
-      { "@type": "ListItem", position: 2, name: "Servicios", item: "https://logro-vtc.vercel.app/servicios" },
-      { "@type": "ListItem", position: 3, name: service.name, item: `https://logro-vtc.vercel.app/servicios/${service.slug}` },
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://logrovtc.com/" },
+      { "@type": "ListItem", position: 2, name: "Servicios", item: "https://logrovtc.com/servicios" },
+      { "@type": "ListItem", position: 3, name: service.name, item: `https://logrovtc.com/servicios/${service.slug}` },
     ],
   });
 

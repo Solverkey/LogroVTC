@@ -19,7 +19,7 @@ export default function Gallery({ count = 8 }: GalleryProps) {
         const normalize = (u: string) => {
           try {
             if (u.includes("/_next/image")) {
-              const urlObj = new URL(u, typeof window !== "undefined" ? window.location.origin : "https://logro-vtc.vercel.app");
+              const urlObj = new URL(u, typeof window !== "undefined" ? window.location.origin : "https://logrovtc.com");
               const raw = urlObj.searchParams.get("url");
               if (raw) return decodeURIComponent(raw);
             }
@@ -108,7 +108,7 @@ export default function Gallery({ count = 8 }: GalleryProps) {
       onClick={() => setLightboxIndex(null)}
     >
       <div
-        className="relative w-[92vw] max-w-5xl h-[82vh]"
+        className="relative w-[90vw] max-w-5xl h-[82vh] max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <Image

@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!l) return {};
   const title = `${l.name} | VTC y traslados | LogroVTC`;
   const description = l.intro;
-  const url = `https://logro-vtc.vercel.app/localidades/${slug}`;
+  const url = `https://logrovtc.com/localidades/${slug}`;
   return {
     title,
     description,

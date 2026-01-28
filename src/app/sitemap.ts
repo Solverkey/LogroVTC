@@ -2,11 +2,12 @@ import type { MetadataRoute } from "next";
 import { services, airports, stations } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://logro-vtc.vercel.app";
+  const base = "https://logrovtc.com";
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/contacto`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/servicios`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/aeropuertos`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/estaciones`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/localidades`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },

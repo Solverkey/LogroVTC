@@ -10,8 +10,8 @@ import Reveal from "@/components/visual/Reveal";
 export const metadata: Metadata = {
   title: "Servicios | LogroVTC",
   description: "Servicios de traslados VTC en La Rioja: aeropuertos, Camino y mensajería.",
-  alternates: { canonical: "https://logro-vtc.vercel.app/servicios" },
-  openGraph: { title: "Servicios | LogroVTC", description: "Listado de servicios VTC.", url: "https://logro-vtc.vercel.app/servicios", type: "website" },
+  alternates: { canonical: "https://logrovtc.com/servicios" },
+  openGraph: { title: "Servicios | LogroVTC", description: "Listado de servicios VTC.", url: "https://logrovtc.com/servicios", type: "website" },
 };
 
 export default async function ServiciosIndexPage() {

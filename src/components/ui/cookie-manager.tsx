@@ -45,7 +45,7 @@ export default function CookieManager({ open, onOpenChange, hideTrigger = false,
         </div>
       )}
       
-      <DialogContent className={`${compact ? "max-w-md w-[92vw] p-4" : "max-w-2xl p-6"}`}>
+      <DialogContent className={`${compact ? "max-w-md w-[90vw] p-4" : "max-w-2xl w-[90vw] p-6"}`}>
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Cookie className="h-5 w-5" />

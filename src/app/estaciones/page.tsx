@@ -10,8 +10,8 @@ import Reveal from "@/components/visual/Reveal";
 export const metadata: Metadata = {
   title: "Estaciones | LogroVTC",
   description: "Traslados a estaciones de tren y bus cercanas a La Rioja.",
-  alternates: { canonical: "https://logro-vtc.vercel.app/estaciones" },
-  openGraph: { title: "Estaciones | LogroVTC", description: "Listado de estaciones.", url: "https://logro-vtc.vercel.app/estaciones", type: "website" },
+  alternates: { canonical: "https://logrovtc.com/estaciones" },
+  openGraph: { title: "Estaciones | LogroVTC", description: "Listado de estaciones.", url: "https://logrovtc.com/estaciones", type: "website" },
 };
 
 export default async function EstacionesIndexPage() {
@@ -34,7 +34,7 @@ export default async function EstacionesIndexPage() {
               "@type": "ListItem",
               position: index + 1,
               name: s.name,
-              url: `https://logro-vtc.vercel.app/estaciones/${s.slug}`,
+              url: `https://logrovtc.com/estaciones/${s.slug}`,
             })),
           }),
         }}
