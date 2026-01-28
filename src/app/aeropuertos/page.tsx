@@ -10,8 +10,8 @@ import Reveal from "@/components/visual/Reveal";
 export const metadata: Metadata = {
   title: "Aeropuertos | LogroVTC",
   description: "Traslados a aeropuertos desde La Rioja y Rioja Alavesa.",
-  alternates: { canonical: "https://logro-vtc.vercel.app/aeropuertos" },
-  openGraph: { title: "Aeropuertos | LogroVTC", description: "Listado de aeropuertos.", url: "https://logro-vtc.vercel.app/aeropuertos", type: "website" },
+  alternates: { canonical: "https://logrovtc.com/aeropuertos" },
+  openGraph: { title: "Aeropuertos | LogroVTC", description: "Listado de aeropuertos.", url: "https://logrovtc.com/aeropuertos", type: "website" },
 };
 
 export default async function AeropuertosIndexPage() {
@@ -34,7 +34,7 @@ export default async function AeropuertosIndexPage() {
               "@type": "ListItem",
               position: index + 1,
               name: a.name,
-              url: `https://logro-vtc.vercel.app/aeropuertos/${a.slug}`,
+              url: `https://logrovtc.com/aeropuertos/${a.slug}`,
             })),
           }),
         }}

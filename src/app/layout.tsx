@@ -26,13 +26,13 @@ export const metadata: Metadata = {
   title: "VTC en Logroño y La Rioja | Traslados Aeropuerto, Camino y Mensajería – LogroVTC",
   description:
     "VTC en Logroño y La Rioja. Traslados a aeropuertos (Bilbao, Pamplona, Madrid, Zaragoza), apoyo al Camino de Santiago y mensajería urgente con precio cerrado. Tel. 684 20 06 59.",
-  metadataBase: new URL("https://logro-vtc.vercel.app"),
+  metadataBase: new URL("https://logrovtc.com"),
   alternates: { canonical: "/" },
   openGraph: {
     title: "VTC en Logroño y La Rioja | LogroVTC",
     description:
       "Traslados VTC en La Rioja: aeropuertos, Camino de Santiago y mensajería urgente con precio cerrado.",
-    url: "https://logro-vtc.vercel.app/",
+    url: "https://logrovtc.com/",
     siteName: "LogroVTC",
     type: "website",
     locale: "es_ES",
@@ -70,10 +70,10 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'LogroVTC',
-              url: 'https://logro-vtc.vercel.app',
+              url: 'https://logrovtc.com',
               telephone: '+34684200659',
               areaServed: ['La Rioja', 'Rioja Alavesa', 'España'],
-              image: 'https://logro-vtc.vercel.app/vehicles/vehicle-1.jpg',
+              image: 'https://logrovtc.com/vehicles/vehicle-1.jpg',
               sameAs: [],
               address: { '@type': 'PostalAddress', addressCountry: 'ES' },
               openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: 'https://schema.org/AllDay', opens: '00:00', closes: '23:59' }],

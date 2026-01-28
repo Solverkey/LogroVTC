@@ -1,6 +1,6 @@
 # LogroVTC - Servicios VTC en Logroño y La Rioja
 
-> https://logro-vtc.vercel.app
+> https://logrovtc.com
 
 LogroVTC es una empresa de transporte VTC (Vehículo de Turismo con Conductor) con base en Logroño, La Rioja. Ofrecemos servicios de traslado a aeropuertos, apoyo al Camino de Santiago y mensajería urgente.
 
@@ -19,7 +19,7 @@ LogroVTC es una empresa de transporte VTC (Vehículo de Turismo con Conductor) c
 ## Contacto
 
 - Teléfono: 684 20 06 59
-- Web: https://logro-vtc.vercel.app
+- Web: https://logrovtc.com
 - Email: info@logrovtc.com
 
 ## Enlaces principales

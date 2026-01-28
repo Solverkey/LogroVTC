@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (st) {
       const title = `${st.name} | Traslados VTC | LogroVTC`;
       const description = st.description;
-      const url = `https://logro-vtc.vercel.app/estaciones/${slug}`;
+      const url = `https://logrovtc.com/estaciones/${slug}`;
       return {
         title,
         description,
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!station) return {};
   const title = `${station.name} | Traslados VTC | LogroVTC`;
   const description = station.description;
-  const url = `https://logro-vtc.vercel.app/estaciones/${station.slug}`;
+  const url = `https://logrovtc.com/estaciones/${station.slug}`;
   return {
     title,
     description,
@@ -95,7 +95,7 @@ export default async function StationPage({ params }: PageProps) {
       "@type": "LocalBusiness",
       name: "LogroVTC",
       telephone: "+34684200659",
-      url: `https://logro-vtc.vercel.app/estaciones/${station.slug}`,
+      url: `https://logrovtc.com/estaciones/${station.slug}`,
       areaServed: ["La Rioja", "España"],
     },
   } as const;
@@ -114,9 +114,9 @@ export default async function StationPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://logro-vtc.vercel.app/" },
-      { "@type": "ListItem", position: 2, name: "Estaciones", item: "https://logro-vtc.vercel.app/estaciones" },
-      { "@type": "ListItem", position: 3, name: station.name, item: `https://logro-vtc.vercel.app/estaciones/${station.slug}` },
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://logrovtc.com/" },
+      { "@type": "ListItem", position: 2, name: "Estaciones", item: "https://logrovtc.com/estaciones" },
+      { "@type": "ListItem", position: 3, name: station.name, item: `https://logrovtc.com/estaciones/${station.slug}` },
     ],
   } as const;
 

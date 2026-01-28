@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { services, airports, stations } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://logro-vtc.vercel.app";
+  const base = "https://logrovtc.com";
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },

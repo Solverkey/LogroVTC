@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description:
     "Contacta con LogroVTC para traslados a aeropuertos, Camino de Santiago y mensajería urgente. Tel: 684 20 06 59. Servicio en Logroño y La Rioja.",
   alternates: {
-    canonical: "https://logro-vtc.vercel.app/contacto"
+    canonical: "https://logrovtc.com/contacto"
   },
   openGraph: {
     title: "Contacto | LogroVTC",
     description: "Contacta con LogroVTC para traslados VTC en La Rioja.",
-    url: "https://logro-vtc.vercel.app/contacto",
+    url: "https://logrovtc.com/contacto",
     siteName: "LogroVTC",
     type: "website",
     locale: "es_ES",

@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   title: "Localidades | LogroVTC",
   description: "Servicio VTC en Logroño, Laguardia, Elciego y toda La Rioja. Traslados a aeropuertos y servicios locales.",
   alternates: {
-    canonical: "https://logro-vtc.vercel.app/localidades"
+    canonical: "https://logrovtc.com/localidades"
   },
   openGraph: {
     title: "Localidades | LogroVTC",
     description: "Servicio VTC en Logroño, Laguardia, Elciego y La Rioja.",
-    url: "https://logro-vtc.vercel.app/localidades",
+    url: "https://logrovtc.com/localidades",
     siteName: "LogroVTC",
     type: "website",
     locale: "es_ES",

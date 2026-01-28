@@ -19,7 +19,7 @@ export default function Gallery({ count = 8 }: GalleryProps) {
         const normalize = (u: string) => {
           try {
             if (u.includes("/_next/image")) {
-              const urlObj = new URL(u, typeof window !== "undefined" ? window.location.origin : "https://logro-vtc.vercel.app");
+              const urlObj = new URL(u, typeof window !== "undefined" ? window.location.origin : "https://logrovtc.com");
               const raw = urlObj.searchParams.get("url");
               if (raw) return decodeURIComponent(raw);
             }
