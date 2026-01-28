@@ -11,8 +11,23 @@ const LOCALITIES = [
 
 export const metadata: Metadata = {
   title: "Localidades | LogroVTC",
-  description: "Servicio VTC en Logroño, Laguardia y Elciego.",
-  alternates: { canonical: "/localidades" },
+  description: "Servicio VTC en Logroño, Laguardia, Elciego y toda La Rioja. Traslados a aeropuertos y servicios locales.",
+  alternates: {
+    canonical: "https://logro-vtc.vercel.app/localidades"
+  },
+  openGraph: {
+    title: "Localidades | LogroVTC",
+    description: "Servicio VTC en Logroño, Laguardia, Elciego y La Rioja.",
+    url: "https://logro-vtc.vercel.app/localidades",
+    siteName: "LogroVTC",
+    type: "website",
+    locale: "es_ES",
+  },
+  twitter: {
+    card: "summary",
+    title: "Localidades | LogroVTC",
+    description: "Servicio VTC en Logroño, Laguardia, Elciego y La Rioja.",
+  },
 };
 
 export default function LocalidadesIndexPage() {

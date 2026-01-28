@@ -1,0 +1,32 @@
+# LogroVTC - Servicios VTC en Logroño y La Rioja
+
+> https://logro-vtc.vercel.app
+
+LogroVTC es una empresa de transporte VTC (Vehículo de Turismo con Conductor) con base en Logroño, La Rioja. Ofrecemos servicios de traslado a aeropuertos, apoyo al Camino de Santiago y mensajería urgente.
+
+## Servicios principales
+
+- **Traslados a aeropuertos**: Conexiones a Bilbao (BIO), Pamplona (PNA), Madrid-Barajas (MAD), Zaragoza (ZAZ), Barcelona (BCN), Santander (SDR) y más.
+- **Camino de Santiago**: Traslados entre etapas, transfer de mochilas y apoyo logístico.
+- **Mensajería urgente**: Entregas puerta a puerta en España y Europa.
+
+## Cobertura
+
+- La Rioja (Logroño, Haro, Calahorra, Arnedo)
+- Rioja Alavesa (Laguardia, Elciego)
+- Norte de España y rutas internacionales
+
+## Contacto
+
+- Teléfono: 684 20 06 59
+- Web: https://logro-vtc.vercel.app
+- Email: info@logrovtc.com
+
+## Enlaces principales
+
+- Inicio: /
+- Servicios: /servicios
+- Aeropuertos: /aeropuertos
+- Estaciones: /estaciones
+- Localidades: /localidades
+- Contacto: /contacto

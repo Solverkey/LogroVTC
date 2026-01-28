@@ -29,7 +29,7 @@ export default function Nebula({ className, triggerId = "inicio", intensity = 1 
       const rect = el.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      gsap.to(el, { duration: 0.6, ease: "power3.out", x: x * 30, y: y * 20 });
+      gsap.to(el, { duration: 0.6, ease: "power3.out", x: x * 15, y: y * 10 });
     };
 
     window.addEventListener("mousemove", onMove, { passive: true });
@@ -77,19 +77,19 @@ export default function Nebula({ className, triggerId = "inicio", intensity = 1 
     <div
       ref={rootRef}
       className={cn(
-        "pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen z-0 overflow-hidden",
+        "pointer-events-none absolute inset-0 z-0 overflow-hidden",
         className
       )}
       style={{ transform: `scale(${1 + 0.07 * intensity})` }}
     >
       {/* Blobs individuales (mezcla en pantalla) */}
-      <span ref={b1} className="absolute left-1/4 top-1/3 size-[70vmax] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-70 blur-[60px]"
+      <span ref={b1} className="absolute left-1/4 top-1/3 size-[min(50vw,50vh)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-70 blur-[60px]"
         style={{ background: "radial-gradient(closest-side, hsla(263,89%,58%,0.9), transparent 70%)" }} />
-      <span ref={b2} className="absolute left-2/3 top-1/2 size-[65vmax] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-60 blur-[60px]"
+      <span ref={b2} className="absolute left-2/3 top-1/2 size-[min(45vw,45vh)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-60 blur-[60px]"
         style={{ background: "radial-gradient(closest-side, hsla(200,90%,60%,0.9), transparent 70%)" }} />
-      <span ref={b3} className="absolute left-1/2 top-2/3 size-[60vmax] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-55 blur-[60px]"
+      <span ref={b3} className="absolute left-1/2 top-2/3 size-[min(40vw,40vh)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-55 blur-[60px]"
         style={{ background: "radial-gradient(closest-side, hsla(310,75%,65%,0.85), transparent 70%)" }} />
-      <span ref={b4} className="absolute left-1/3 top-3/4 size-[62vmax] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-55 blur-[60px]"
+      <span ref={b4} className="absolute left-1/3 top-3/4 size-[min(42vw,42vh)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-55 blur-[60px]"
         style={{ background: "radial-gradient(closest-side, hsla(35,95%,60%,0.85), transparent 70%)" }} />
 
       {/* Ruido sutil sobre los colores */}
