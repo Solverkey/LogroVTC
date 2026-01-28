@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <style>
+      .bg { fill: #A53776; }
+      .text { fill: #FFFFFF; font-family: 'Arial', sans-serif; font-weight: 700; }
+      .logro { font-size: 280px; letter-spacing: -8px; }
+      .vtc { font-size: 420px; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <!-- Fondo con bordes redondeados -->
+  <rect class="bg" width="1024" height="1024" rx="140" ry="140"/>
+
+  <!-- Texto "Logro" -->
+  <text class="text logro" x="512" y="410" text-anchor="middle">Logro</text>
+
+  <!-- Texto "VTC" -->
+  <text class="text vtc" x="512" y="770" text-anchor="middle">VTC</text>
+</svg>

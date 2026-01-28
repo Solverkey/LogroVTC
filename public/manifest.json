@@ -1,0 +1,21 @@
+{
+  "name": "LogroVTC - Servicios VTC en La Rioja",
+  "short_name": "LogroVTC",
+  "description": "VTC en Logroño y La Rioja. Traslados a aeropuertos, Camino de Santiago y mensajería urgente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A53776",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "transportation"],
+  "lang": "es",
+  "dir": "ltr"
+}

@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "VTC en Logroño y La Rioja. Traslados a aeropuertos (Bilbao, Pamplona, Madrid, Zaragoza), apoyo al Camino de Santiago y mensajería urgente con precio cerrado. Tel. 684 20 06 59.",
   metadataBase: new URL("https://logrovtc.com"),
   alternates: { canonical: "/" },
+  manifest: "/manifest.json",
   openGraph: {
     title: "VTC en Logroño y La Rioja | LogroVTC",
     description:
