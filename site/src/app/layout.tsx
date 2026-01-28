@@ -139,7 +139,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
+        <header className="sticky top-0 z-50 bg-background/95 md:bg-background/80 md:backdrop-blur border-b border-border bg-gradient-to-b from-background to-background/90">
           <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
             <Link href="/#inicio" className="text-lg font-semibold tracking-tight">LogroVTC</Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
