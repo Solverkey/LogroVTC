@@ -181,7 +181,7 @@ export default function HomeContent() {
       <Reveal>
         <section id="aeropuerto" className="mt-24 scroll-mt-24">
           <div className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="relative md:col-span-5 order-2 md:order-1">
+            <div className="relative md:col-span-5 order-2 md:order-1 overflow-x-clip">
               <div className="sticky top-24 h-[500px] rounded-2xl overflow-hidden border border-border">
                 <Image
                   src={airportImg}
@@ -294,7 +294,7 @@ export default function HomeContent() {
                 </Button>
               </div>
             </div>
-            <div className="md:col-span-5 relative">
+            <div className="md:col-span-5 relative overflow-x-clip">
               <div className="sticky top-24 h-[500px] rounded-2xl overflow-hidden border border-border">
                 <Image
                   src={caminoImg}
@@ -317,7 +317,7 @@ export default function HomeContent() {
       <Reveal>
         <section id="mensajeria" className="mt-24 scroll-mt-24">
           <div className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-5 relative">
+            <div className="md:col-span-5 relative overflow-x-clip">
               <div className="sticky top-24 h-[500px] rounded-2xl overflow-hidden border border-border">
                 <Image
                   src={mensajeriaImg}
