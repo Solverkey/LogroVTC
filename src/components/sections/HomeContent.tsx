@@ -51,7 +51,7 @@ export default function HomeContent() {
     <main className="mx-auto max-w-6xl px-4">
       {/* HERO con superposición y tipografía display */}
       <Reveal>
-        <section id="inicio" className="relative pt-10 md:pt-16 scroll-mt-24">
+        <section id="inicio" className="relative pt-10 md:pt-16 scroll-mt-24 overflow-x-clip">
           <InteractiveBackground />
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -179,7 +179,7 @@ export default function HomeContent() {
 
       {/* SECCIÓN AEROPUERTO (layout alterno con overlay) */}
       <Reveal>
-        <section id="aeropuerto" className="mt-24 scroll-mt-24">
+        <section id="aeropuerto" className="mt-24 scroll-mt-24 overflow-x-clip">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="relative md:col-span-5 order-2 md:order-1 overflow-x-clip">
               <div className="sticky top-24 h-[500px] rounded-2xl overflow-hidden border border-border">
@@ -271,7 +271,7 @@ export default function HomeContent() {
 
       {/* SECCIÓN CAMINO (split con tarjeta de ruta) */}
       <Reveal>
-        <section id="camino" className="mt-24 scroll-mt-24">
+        <section id="camino" className="mt-24 scroll-mt-24 overflow-x-clip">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-7">
               <h3 className="text-4xl font-bold leading-tight">Camino de Santiago</h3>
@@ -315,7 +315,7 @@ export default function HomeContent() {
 
       {/* SECCIÓN MENSAJERÍA (paneles destacados) */}
       <Reveal>
-        <section id="mensajeria" className="mt-24 scroll-mt-24">
+        <section id="mensajeria" className="mt-24 scroll-mt-24 overflow-x-clip">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-5 relative overflow-x-clip">
               <div className="sticky top-24 h-[500px] rounded-2xl overflow-hidden border border-border">

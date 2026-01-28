@@ -29,7 +29,8 @@ export default function Nebula({ className, triggerId = "inicio", intensity = 1 
       const rect = el.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      gsap.to(el, { duration: 0.6, ease: "power3.out", x: x * 15, y: y * 10 });
+      // Reducir movimiento para prevenir overflow horizontal
+      gsap.to(el, { duration: 0.6, ease: "power3.out", x: x * 8, y: y * 6 });
     };
 
     window.addEventListener("mousemove", onMove, { passive: true });
@@ -52,9 +53,9 @@ export default function Nebula({ className, triggerId = "inicio", intensity = 1 
     const animateBlob = (elmt: Element | null, dur: number, scale = 1) => {
       if (!elmt) return;
       gsap.to(elmt, {
-        xPercent: rand(-20, 20),
-        yPercent: rand(-20, 20),
-        scale: scale * rand(0.9, 1.1),
+        xPercent: rand(-10, 10),
+        yPercent: rand(-10, 10),
+        scale: scale * rand(0.95, 1.05),
         duration: dur,
         ease: "sine.inOut",
         repeat: -1,
@@ -80,7 +81,6 @@ export default function Nebula({ className, triggerId = "inicio", intensity = 1 
         "pointer-events-none absolute inset-0 z-0 overflow-hidden",
         className
       )}
-      style={{ transform: `scale(${1 + 0.07 * intensity})` }}
     >
       {/* Blobs individuales (mezcla en pantalla) */}
       <span ref={b1} className="absolute left-1/4 top-1/3 size-[min(50vw,50vh)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen opacity-70 blur-[60px]"
