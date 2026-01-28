@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import CookieBanner from "@/components/ui/cookie-banner";
 import CookieWidget from "@/components/ui/cookie-widget";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -167,6 +168,7 @@ export default function RootLayout({
         <CookieWidget />
         {/* Portal root para modales/lightbox globales */}
         <div id="portal-root" />
+        <Analytics />
       </body>
     </html>
   );
