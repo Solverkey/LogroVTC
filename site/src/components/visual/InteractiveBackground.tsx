@@ -37,9 +37,9 @@ export default function InteractiveBackground() {
       const rotate = Math.sin(time * 0.3) * 1.5;
       const scale = 1 + Math.sin(time * 0.5) * 0.015;
       
-      // Respuesta al ratón - MUY VISIBLE
-      const mouseX = mouseRef.current.x * 150;
-      const mouseY = mouseRef.current.y * 100;
+      // Respuesta al ratón - Reducida para evitar overflow
+      const mouseX = mouseRef.current.x * 50;
+      const mouseY = mouseRef.current.y * 40;
       
       group.style.transform = `rotate(${rotate}deg) scale(${scale}) translate(${mouseX}px, ${mouseY}px)`;
 
@@ -71,7 +71,7 @@ export default function InteractiveBackground() {
   return (
     <svg
       ref={svgRef}
-      className="absolute inset-0 -z-10 w-[140vw] max-w-none h-full left-1/2 -translate-x-1/2"
+      className="absolute inset-0 -z-10 w-full h-full"
       xmlns="http://www.w3.org/2000/svg"
       style={{
         maskImage: "linear-gradient(to bottom, rgba(0,0,0,0.98) 80%, rgba(0,0,0,0) 100%)",

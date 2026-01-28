@@ -108,7 +108,7 @@ export default function Gallery({ count = 4 }: GalleryProps) {
       onClick={() => setLightboxIndex(null)}
     >
       <div
-        className="relative w-[92vw] max-w-5xl h-[82vh]"
+        className="relative w-[90vw] max-w-5xl h-[82vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <Image
