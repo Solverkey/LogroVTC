@@ -114,7 +114,7 @@ export async function POST(req: Request) {
 
     const resend = new Resend(apiKey);
     const to = process.env.MAIL_TO || "info@logrovtc.com";
-    const from = process.env.RESEND_FROM || "LogroVTC <onboarding@resend.dev>";
+    const from = process.env.RESEND_FROM || "LogroVTC <noreply@logrovtc.com>";
     const subject = `Nueva solicitud de contacto - ${data.nombre || "Sin nombre"}`;
 
     console.log("[Contact API] Enviando email a:", to);
